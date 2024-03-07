@@ -1,44 +1,60 @@
 package org.example;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "MEMBER")
 public class Member {
     @Id
-    @Column(name = "ID")
-    private String id;
+    @GeneratedValue
+    @Column(name = "MEMBER_ID")
+    private Long id;
 
-    @Column(name = "NAME")
-    private String username;
+    private String name;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    private String city;
+    private String street;
+    private String zipcode;
 
-    private Integer age;
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getName() {
+        return name;
     }
 
-    public Integer getAge() {
-        return age;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 }
