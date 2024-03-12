@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.item.Item;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
